@@ -1,4 +1,4 @@
-# spicecrm_krest_core
+# spicecrm_krest_release_core
 SpiceCRM KREST API (Core Release)
 
 Welcome to the KREST API
