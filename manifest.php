@@ -31,13 +31,11 @@ $installdefs = array(
             'from' => '<basepath>/vendor',
             'to' => 'vendor',
         ),
+    ),
+    'relationships' => array(
         array(
-            'from' => '<basepath>/metadata/system_krest.php',
-            'to' => 'custom/metadata/system_krest.php',
-        ),
-        array(
-            'from' => '<basepath>/include/system_krest.TableDictionary.php',
-            'to' => 'custom/Extension/application/Ext/TableDictionary/system_krest.TableDictionary.php',
+            'module' => 'KREST',
+            'meta_data' => '<basepath>/metadata/system_krest.php'
         ),
     )
 );
