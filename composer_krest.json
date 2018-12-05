@@ -1,0 +1,34 @@
+{
+  "name": "krest",
+  "description": "Composer dependencies for krest",
+  "type": "api",
+  "license": "GPL-3.0",
+  "authors": [],
+  "config": {
+    "vendor-dir": "vendor",
+    "platform": {
+      "php": "5.6.0"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "SpiceCRM\\includes\\": "include",
+      "SpiceCRM\\custom\\includes\\": "custom/include",
+      "SpiceCRM\\modules\\": "modules",
+      "SpiceCRM\\custom\\modules\\": "custom/modules"
+    }
+  },
+  "require": {
+    "slim/slim": "3.9.2",
+    "swiftmailer/swiftmailer": "5.4.9",
+    "sendgrid/sendgrid": "^6.2",
+    "symfony/options-resolver": "3.4.3",
+    "mailgun/mailgun-php": "^2.5",
+    "php-http/curl-client": "^1.7",
+    "guzzlehttp/psr7": "^1.4",
+    "guzzlehttp/guzzle": "^6.3",
+    "guzzlehttp/promises": "^1.3",
+    "dompdf/dompdf": "^0.8.2",
+    "phenx/php-svg-lib": "^0.3.2"
+  }
+}

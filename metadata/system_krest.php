@@ -116,11 +116,11 @@ $dictionary['syskrestlog'] = array(
         ),
         'post_params' => array(
             'name' => 'post_params',
-            'type' => 'text',
+            'type' => 'longtext',
         ),
         'response' => array(
             'name' => 'response',
-            'type' => 'text',
+            'type' => 'longtext',
         ),
         'http_status_code' => array(
             'name' => 'http_status_code',

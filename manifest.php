@@ -16,7 +16,7 @@ $manifest = array(
     'name' => 'KREST Core',
     'author' => 'aac services k.s.',
     'description' => 'REST Interface for SugarCRM',
-    'published_date' => '2018/26/10',
+    'published_date' => '2018/05/12',
     'version' => 'v3.1.0',
     'type' => 'module'
 );
@@ -28,9 +28,13 @@ $installdefs = array(
             'to' => 'KREST',
         ),
         array(
+            'from' => '<basepath>/composer_krest.json',
+            'to' => 'composer_krest.json',
+        ),
+        array(
             'from' => '<basepath>/vendor',
             'to' => 'vendor',
-        ),
+        )
     ),
     'relationships' => array(
         array(
@@ -39,3 +43,7 @@ $installdefs = array(
         ),
     )
 );
+//workaround for suitecrm: do not load vendor
+if(isset($GLOBALS['suitecrm_version'])){
+    unset($installdefs['copy'][2]);
+}

@@ -33,6 +33,7 @@ require_once dirname(__FILE__).'/../vendor/autoload.php';
 require_once dirname(__FILE__).'/../vendor/slim/slim/Slim/App.php';
 
 $GLOBALS['isREST'] = true;
+$GLOBALS['guidRegex'] = '[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}'; // this simple form (no grouping) is required by SLIM
 
 /**
  * SETTINGs

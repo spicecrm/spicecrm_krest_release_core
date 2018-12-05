@@ -63,8 +63,13 @@ function outputError( $exception ) {
 
     }
 
+
     http_response_code( $httpCode ? $httpCode : 500 );
-    echo json_encode( [ 'error' => $responseData ]);
+    $json = json_encode( [ 'error' => $responseData ], JSON_PARTIAL_OUTPUT_ON_ERROR);
+    if(!$json)
+        echo json_encode([ 'error' => 'Error while json encoding of an Exception: '.json_last_error_msg().'... with Exception Message: '.$exception->getMessage()]);
+    else
+        echo $json;
     exit;
 
 }
